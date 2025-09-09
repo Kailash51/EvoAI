@@ -134,7 +134,7 @@ All responses include a structured trace:
 
 ## 📜 System Prompt
 
-See `prompts/system.md` (junior-style, short).  
+See `prompts/system.md`
 
 Rules include:
 
