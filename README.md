@@ -79,13 +79,14 @@ This uses `src/graph.py:run_langgraph_agent(payload)` so you can pass structured
 ```mermaid
 flowchart LR
   U[User] --> R[Router]
-  R -->|product_assist| TSProduct[ToolSelector (Product)]
-  R -->|order_help| TSOrder[ToolSelector (Order)]
-  R -->|other| RESP
+  R -->|product_assist| TSProduct[ToolSelector Product]
+  R -->|order_help| TSOrder[ToolSelector Order]
+  R -->|other| RESP[Responder]
   TSProduct --> PG[PolicyGuard]
   TSOrder --> PG
-  PG --> RESP[Responder]
+  PG --> RESP
   RESP --> U2[Reply]
+
 
 
 - **Router**: Classifies intent → `product_assist` / `order_help` / `other`  
