@@ -48,7 +48,7 @@ python tests\run_tests_langgraph.py
 
 You should see **4 sections** printed, each with a **TRACE JSON** and a **FINAL REPLY**.
 
-To run additional tests:
+
 
 ```powershell
 python tests\run_more_tests.py
