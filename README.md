@@ -79,13 +79,12 @@ This uses `src/graph.py:run_langgraph_agent(payload)` so you can pass structured
 ```mermaid
 flowchart LR
   U[User] --> R[Router]
-  R -->|product_assist| TSProduct[ToolSelector Product]
-  R -->|order_help| TSOrder[ToolSelector Order]
-  R -->|other| RESP[Responder]
-  TSProduct --> PG[PolicyGuard]
-  TSOrder --> PG
-  PG --> RESP
-
+  R -->|product_assist| TS[ToolSelector]
+  R -->|order_help| TS
+  TS --> Tools[(Tools)]
+  Tools --> PG[PolicyGuard]
+  PG --> RESP[Responder]
+  RESP --> U2[Reply]
 
 
 
