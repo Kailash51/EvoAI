@@ -1,10 +1,7 @@
-Got it 👍
-Here’s a **clean GitHub-ready README.md** version — copy this directly into your `README.md` file. All formatting (headings, code blocks, Mermaid diagram, file tree) is adjusted so it looks neat on GitHub.
-
 ---
 
 ````markdown
-# EvoAI Agent — Mini Agentic Commerce (LangGraph, simple)
+# EvoAI Agent — Mini Agentic Commerce 
 
 A small, policy-aware commerce agent built with **LangGraph** that supports:
 
@@ -13,15 +10,7 @@ A small, policy-aware commerce agent built with **LangGraph** that supports:
 - **Guardrails**: refuses non-existent discount codes  
 - **Traces**: every response emits a JSON trace for auditing  
 
-This is a **fresher-level** implementation: straightforward code, minimal deps, all logic in local Python with JSON files (no network).
-
 ---
-
-## ⚙️ Tech Stack
-
-- **Python 3.9+** (Windows-friendly)  
-- **LangGraph** (node orchestration)  
-- Standard library only (`json`, `datetime`, `re`)
 
 ---
 
@@ -40,10 +29,10 @@ This is a **fresher-level** implementation: straightforward code, minimal deps, 
 │  ├─ __init__.py
 │  ├─ tools.py
 │  ├─ graph_langgraph.py
-│  └─ graph.py                 # wrapper: run_langgraph_agent(payload)
+│  └─ graph.py                 
 └─ tests/
-   ├─ run_tests_langgraph.py   # required 4 tests (prints trace + reply)
-   └─ run_more_tests.py        # optional extra edge-case tests
+   ├─ run_tests_langgraph.py   
+   └─ run_more_tests.py        
 ````
 
 ---
@@ -64,7 +53,6 @@ python tests\run_tests_langgraph.py
 
 You should see **4 sections** printed, each with a **TRACE JSON** and a **FINAL REPLY**.
 
-### (Optional) Extra Edge-Case Tests
 
 ```powershell
 python tests\run_more_tests.py
@@ -135,8 +123,6 @@ All responses include a structured trace:
   "final_message": "string"
 }
 ```
-
-👉 **No hallucinations**: all product/order attributes in replies come only from tools.
 
 ---
 
