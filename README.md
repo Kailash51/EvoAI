@@ -85,7 +85,7 @@ flowchart LR
   TSProduct --> PG[PolicyGuard]
   TSOrder --> PG
   PG --> RESP
-  RESP --> U2[Reply]
+
 
 
 
