@@ -76,6 +76,7 @@ This uses `src/graph.py:run_langgraph_agent(payload)` so you can pass structured
 
 ## 🔎 Architecture Flow
 
+```mermaid
 flowchart LR
   U[User] --> R[Router]
   R -->|product_assist| TS_Product[ToolSelector<br/>Product]
